@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #1a1a1a;
+  font-size: 16px;
+  padding: 2rem;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.the-type {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 50px;
+  width: fit-content;
+  display: inline;
+  background: linear-gradient(
+    45deg,
+    rgb(0, 143, 104),
+    rgb(172, 51, 233),
+    rgb(250, 224, 66)
+  );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+  text-transform: capitalize;
+  border-right-style: solid;
+  border-width: 10px;
+  border-image: linear-gradient(
+      45deg,
+      rgb(0, 143, 104),
+      rgb(172, 51, 233),
+      rgb(250, 224, 66)
+    )
+    1;
+}
+
+footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  color: #312f2f;
+}
+
+main {
+  padding: 2rem;
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+}
+
+.card {
+  background-color: #312f2f;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  justify-content: space-between;
+  animation: shadow-animation 10s infinite;
+}
+
+.card h2 {
+  font-family: 'MuseoModerno', cursive;
+  color: #aba3a3;
+  font-weight: 400;
+}
+
+.card p {
+  font-family: 'Rubik', sans-serif;
+  color: #e0d8d8;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+@keyframes shadow-animation {
+  0% {
+    box-shadow: 0px 5px 7px rgba(0, 143, 104), 0px 4px 8px rgba(172, 51, 233),
+      0px 6px 9px rgba(250, 224, 66);
+  }
+  33% {
+    box-shadow: 0px 5px 7px rgba(172, 51, 233), 0px 4px 8px rgba(250, 224, 66),
+      0px 6px 9px rgba(0, 143, 104);
+  }
+  66% {
+    box-shadow: 0px 5px 7px rgba(250, 224, 66), 0px 4px 8px rgba(0, 143, 104),
+      0px 6px 9px rgba(172, 51, 233);
+  }
+  100% {
+    box-shadow: 0px 5px 7px rgba(0, 143, 104), 0px 4px 8px rgba(172, 51, 233),
+      0px 6px 9px rgba(250, 224, 66);
+  }
+}
+
+.vertical-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.horizontal-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.tall {
+  flex-grow: 1;
+}
